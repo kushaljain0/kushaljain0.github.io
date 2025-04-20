@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kushal Jain - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <h1>Kushal Jain</h1>
+            <p>Backend/AI Developer | Competitive Programmer | Open Source Contributor</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm a Computer Science student at IIIT Naya Raipur with a passion for software development, AI, and competitive programming. I specialize in backend development, AI/ML, and blockchain technologies. With experience at companies like Samsung, Tally Solutions, and Apra Labs, I've worked on diverse projects ranging from network packet classification to CBDC implementation and LLM frameworks.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Backend/AI Developer, Apra Labs</h3>
+                    <p class="date">Jan 2024 – Present</p>
+                    <ul>
+                        <li>Implemented a modular framework for Multi-Modal Large Language Models (LLMs) in the Aprapipes Toolkit</li>
+                        <li>Integrated a Vision Transformer-based model LLAVA based on the above framework</li>
+                        <li>Deployment of these LLM Modules as API Endpoint using Node and Docker</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Blockchain Intern, Tally Solutions Ltd</h3>
+                    <p class="date">Jun 2023 – Aug 2023</p>
+                    <ul>
+                        <li>Developing and implementing a POC for Central Bank Digital Currency on a blockchain network using GoLang and Hyperledger Fabric</li>
+                        <li>Research existing CBDC implementations to enhance the efficiency and scalability of the proposed solution</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>R&D Intern, Samsung</h3>
+                    <p class="date">Aug 2022 – Feb 2023</p>
+                    <ul>
+                        <li>Project based Research Internship on Network Call and Packet Classification</li>
+                        <li>Worked closely on DPDK-packet classification library</li>
+                        <li>Evaluated memory usage and search performance of the library</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Term-GPT</h3>
+                    <p>Created an LLM-powered command line tool with support for 8+ models, including Google Gemini, OpenAI GPT, and Anthropic Claude, enabling natural language to command translation with 1.6-second response times in fast mode.</p>
+                    <p>Enabled free, offline use through quantized models, achieving a 50% reduction in API call costs by optimizing model selection and rate-limiting usage across devices without GPUs.</p>
+                    <a href="projects/term-gpt.html" class="btn">View Details</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>FileTagger</h3>
+                    <p>Made in a 2-day Hackathon Conducted by Tally Solutions Limited. A Simple-GUI-based file tagging and searching tool built using Python for Windows OS.</p>
+                    <a href="projects/filetagger.html" class="btn">View Details</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Unified Complaint Interface (UCI)</h3>
+                    <p>Combines all the complaint portals into one portal, making it easier for the user to file the complaint regardless of the problem. Database with SQLite, following the front end with HTML5 and CSS3, and finally hosted on Heroku.</p>
+                    <a href="projects/uci.html" class="btn">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <p>C, C++, Python, Java, Javascript, Typescript, GoLang</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Web Technologies / Frameworks</h3>
+                    <p>Flask, SQLite, Hyperledger Fabric, Pinecone Vector Database, Nodejs, React, Node Addon API, Docker, AWS Microservices</p>
+                </div>
+                <div class="skills-category">
+                    <h3>ML/AI</h3>
+                    <p>Numpy, Pandas, Scipy, Seaborn, Sklearn, Matplotlib, TensorFlow, Keras, Pytorch, Pygame, OpenAI Embeddings, Folium</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Miscellaneous</h3>
+                    <p>Problem Solving, Git, Information Theory, Q#, Game Theory, Automation, Software Testing, Scripting</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out to me for any opportunities or collaborations!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kushaljain79746@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 7389574818</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bengaluru, Karnataka, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="https://formsubmit.co/kushaljain79746@gmail.com" method="POST">
+                    <input type="text" name="_honey" style="display: none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
