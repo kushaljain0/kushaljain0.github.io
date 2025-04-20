@@ -117,9 +117,25 @@ section {
     gap: 2rem;
 }
 
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
 .project-card {
-    border: 1px solid #eee;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card h3 {
@@ -221,22 +237,30 @@ footer {
 }
 
 /* Project Detail Pages */
+.project-hero {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.project-hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .project-detail {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.project-detail h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .project-info {
-    background: #fff;
+    background: white;
+    border-radius: 8px;
     padding: 2rem;
-    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-description h2 {
