@@ -58,18 +58,6 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
-    position: relative;
-}
-
-.logo::after {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    bottom: 5px;
-    right: -10px;
 }
 
 .nav-links {
@@ -188,28 +176,6 @@ section {
     font-weight: 500;
 }
 
-.hero .subtitle span {
-    position: relative;
-    display: inline-block;
-    margin: 0 8px;
-}
-
-.hero .subtitle span::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.hero .subtitle span:first-child::before {
-    display: none;
-}
-
 .motto {
     margin-top: 4rem;
     padding: 2.5rem;
@@ -305,7 +271,6 @@ section {
     margin: 2rem 0;
     padding: 2rem 0;
     border-top: 2px solid var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
     position: relative;
 }
 
