@@ -26,7 +26,7 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Kushal Jain</h1>
-                <p class="subtitle">Backend/AI Developer | Competitive Programmer | Open Source Contributor</p>
+                <p class="subtitle"><span>Backend/AI Developer</span><span>Competitive Programmer</span><span>Open Source Contributor</span></p>
                 <div class="motto">
                     <h2>Fail Fast, Fail Often</h2>
                     <p class="motto-description">Embracing rapid iteration and continuous learning through experimentation</p>
@@ -196,5 +196,19 @@
             <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
