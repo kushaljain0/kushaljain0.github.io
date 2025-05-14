@@ -16,6 +16,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -38,7 +40,17 @@
         <section id="about" class="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I'm a Computer Science student at IIIT Naya Raipur with a passion for software development, AI, and competitive programming. I specialize in backend development, AI/ML, and blockchain technologies. With experience at companies like Samsung, Tally Solutions, and Apra Labs, I've worked on diverse projects ranging from network packet classification to CBDC implementation and LLM frameworks.</p>
+                <p>I'm a passionate Backend/AI Developer currently working at Apra Labs in Bangalore. With a strong foundation in computer science and a CGPA of 8.91/10 from International Institute of Information Technology, Naya Raipur, I specialize in backend development, AI/ML, and blockchain technologies.</p>
+                
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>International Institute of Information Technology, Naya Raipur</h4>
+                        <p class="degree">B.Tech in Computer Science and Engineering</p>
+                        <p class="education-details">CGPA - 8.91/10 | 2020 - present | Raipur, India</p>
+                    </div>
+                </div>
+                
                 <div class="philosophy">
                     <h3>My Development Philosophy</h3>
                     <p>I believe in rapid prototyping and iterative development, embracing failures as opportunities for growth. By failing fast and often, I accelerate learning and innovation, leading to more robust and refined solutions. Every project is an opportunity to experiment, learn, and improve.</p>
@@ -52,7 +64,19 @@
             <div class="experience-grid">
                 <div class="experience-card">
                     <h3>Backend/AI Developer, Apra Labs</h3>
-                    <p class="date">Jan 2024 – Present</p>
+                    <p class="date">Jul 2024 – Present</p>
+                    <ul>
+                        <li>Developed a production-grade NVR API (C++, GStreamer, Node.js) supporting 24/7 recording, low-latency live streaming (<200ms), and instant playback across 100+ cameras; deployed using Docker across Linux (x86/ARM) and Windows.</li>
+                        <li>Built a plug-and-play Video Analytics service (C++, libtorch, Triton Server) capable of processing 50K+ motion events/day; added real-time SSE streaming for subsecond delivery to UI.</li>
+                        <li>Trained and optimized a YOLO-based defect detection model (Python) for industrial automation; achieved >90% mAP on validation set, reduced false positives via per-class threshold tuning, and sped up inference by 2× using custom ROI-aware SAHI.</li>
+                        <li>Designed a CUDA-accelerated video stitcher with Laplacian pyramid blending, supporting 3-camera stitching at 25+ FPS with minimal latency; integrated PTZ control for enhanced situational awareness.</li>
+                        <li>Implemented SSE-powered object detection overlays in React, handling real-time updates across 1000+ tracked events/hour with smooth UI integration.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Backend/AI Intern, Apra Labs</h3>
+                    <p class="date">Jan 2024 – Jun 2024</p>
                     <ul>
                         <li>Implemented a modular framework for Multi-Modal Large Language Models (LLMs) in the Aprapipes Toolkit</li>
                         <li>Integrated a Vision Transformer-based model LLAVA based on the above framework</li>
@@ -115,11 +139,11 @@
             <div class="skills-grid">
                 <div class="skills-category">
                     <h3>Programming Languages</h3>
-                    <p>C, C++, Python, Java, Javascript, Typescript, GoLang</p>
+                    <p>C, C++, Python, Java, Javascript, Typescript, GoLang, CUDA</p>
                 </div>
                 <div class="skills-category">
                     <h3>Web Technologies / Frameworks</h3>
-                    <p>Flask, SQLite, Hyperledger Fabric, Pinecone Vector Database, Nodejs, React, Node Addon API, Docker, AWS Microservices</p>
+                    <p>Flask, SQLite, Hyperledger Fabric, Pinecone Vector Database, Nodejs, React, Node Addon API, Docker, AWS Microservices, Nvidia Triton, Redis, MongoDB</p>
                 </div>
                 <div class="skills-category">
                     <h3>ML/AI</h3>
@@ -128,6 +152,60 @@
                 <div class="skills-category">
                     <h3>Miscellaneous</h3>
                     <p>Problem Solving, Git, Information Theory, Q#, Game Theory, Automation, Software Testing, Scripting</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h3>Hackathon Winner</h3>
+                        <p>Winner of Tally Codebrewers Hackathon out of 3000+ participants (2022)</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-code"></i></div>
+                    <div class="achievement-content">
+                        <h3>ICPC Regionalist</h3>
+                        <p>Ranked 73rd in Amritapuri and 65th in Kanpur-Mathura Regionals (2022)</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fab fa-google"></i></div>
+                    <div class="achievement-content">
+                        <h3>Google Kickstart</h3>
+                        <p>Ranked 617 out of 10000+ participants worldwide (2022)</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-code-branch"></i></div>
+                    <div class="achievement-content">
+                        <h3>Open Source Contributor</h3>
+                        <p>Contributed to Kong Inc's open source projects</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                    <div class="achievement-content">
+                        <h3>Competitive Programming</h3>
+                        <p>Codeforces - Specialist (1480), Codechef - 5 Star (2058), Active on Leetcode</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <div class="achievement-content">
+                        <h3>Unstop Recognition</h3>
+                        <p>Top 70 E-School Unstoppable Leaders</p>
+                    </div>
                 </div>
             </div>
         </section>
