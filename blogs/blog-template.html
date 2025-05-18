@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title - Kushal Jain</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
+    <style>
+        .blog-post {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .blog-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            line-height: 1.2;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: var(--light-text);
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .blog-meta i {
+            color: var(--primary-color);
+        }
+        
+        .blog-featured-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            font-size: 1.05rem;
+        }
+        
+        .blog-content h2 {
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.2rem;
+            font-size: 1.8rem;
+            text-align: left;
+        }
+        
+        .blog-content h3 {
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .blog-content code {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        /* Fix for main content margin to avoid header overlap */
+        main {
+            margin-top: 5rem;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header-spacer"></div>
+
+    <main>
+        <div class="blog-detail">
+            <h1>Blog Post Title</h1>
+            <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> Month Day, Year</span>
+                <span><i class="fas fa-tag"></i> Category</span>
+                <span><i class="fas fa-clock"></i> X min read</span>
+            </div>
+            
+            <div class="blog-hero">
+                <img src="../images/blog-image.jpg" alt="Blog Featured Image" class="blog-hero-image">
+            </div>
+            
+            <div class="blog-info">
+                <div class="blog-detail-content">
+                    <h2>Introduction</h2>
+                    <p>Provide a compelling introduction to the topic of your blog post. Explain why this topic is important and what readers can expect to learn.</p>
+                    
+                    <h2>Main Topic</h2>
+                    <p>Dive into the main content of your blog post. Break down complex concepts and provide valuable insights.</p>
+                    
+                    <h3>Key Points</h3>
+                    <ul>
+                        <li><strong>Point 1:</strong> Detailed explanation of the first key point</li>
+                        <li><strong>Point 2:</strong> Detailed explanation of the second key point</li>
+                        <li><strong>Point 3:</strong> Detailed explanation of the third key point</li>
+                    </ul>
+                    
+                    <h2>Technical Details</h2>
+                    <p>If applicable, provide technical details, code examples, or implementation specifics.</p>
+                    
+                    <pre><code>
+// Example code block
+function example() {
+    console.log("Hello, World!");
+}
+                    </code></pre>
+                    
+                    <h2>Best Practices</h2>
+                    <p>Share best practices, tips, and recommendations based on your experience.</p>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Summarize the main points and provide a thoughtful conclusion. Include any final thoughts or recommendations.</p>
+                    
+                    <div class="blog-tags">
+                        <span class="tag">Tag 1</span>
+                        <span class="tag">Tag 2</span>
+                        <span class="tag">Tag 3</span>
+                    </div>
+                    
+                    <a href="../index.html#blogs" class="btn"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

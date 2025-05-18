@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Programming Techniques: Dynamic Programming - Kushal Jain</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-detail">
+            <h1>Competitive Programming Techniques: Dynamic Programming</h1>
+            <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> July 5, 2024</span>
+                <span><i class="fas fa-tag"></i> Algorithms</span>
+                <span><i class="fas fa-clock"></i> 12 min read</span>
+            </div>
+            
+            <div class="blog-hero">
+                <img src="../images/dynamic-programming.png" alt="Dynamic Programming Concepts" class="blog-hero-image">
+            </div>
+            
+            <div class="blog-info">
+                <div class="blog-detail-content">
+                    <h2>Introduction</h2>
+                    <p>Dynamic Programming (DP) is one of the most powerful techniques in competitive programming and algorithm design. It allows us to solve complex problems by breaking them down into simpler subproblems and storing their solutions. This article explores key DP concepts, common patterns, and practical implementation strategies.</p>
+                    
+                    <h2>Understanding Dynamic Programming</h2>
+                    <p>At its core, dynamic programming is based on two key principles:</p>
+                    <ul>
+                        <li><strong>Optimal Substructure:</strong> The optimal solution to a problem can be constructed from optimal solutions to its subproblems</li>
+                        <li><strong>Overlapping Subproblems:</strong> The same subproblems are solved multiple times in a recursive solution</li>
+                    </ul>
+                    
+                    <h2>Common DP Patterns</h2>
+                    <h3>1. Fibonacci Sequence</h3>
+                    <p>Let's start with a classic example - calculating the nth Fibonacci number:</p>
+                    
+                    <pre><code>
+// Recursive solution (inefficient)
+function fib(n) {
+    if (n <= 1) return n;
+    return fib(n-1) + fib(n-2);
+}
+
+// DP solution with memoization
+function fibDP(n) {
+    const dp = new Array(n + 1).fill(-1);
+    
+    function fibMemo(n) {
+        if (n <= 1) return n;
+        if (dp[n] !== -1) return dp[n];
+        
+        dp[n] = fibMemo(n-1) + fibMemo(n-2);
+        return dp[n];
+    }
+    
+    return fibMemo(n);
+}
+
+// DP solution with tabulation
+function fibTab(n) {
+    if (n <= 1) return n;
+    
+    const dp = new Array(n + 1);
+    dp[0] = 0;
+    dp[1] = 1;
+    
+    for (let i = 2; i <= n; i++) {
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+    
+    return dp[n];
+}
+                    </code></pre>
+                    
+                    <h3>2. Longest Common Subsequence (LCS)</h3>
+                    <p>Here's an implementation of the LCS problem using DP:</p>
+                    <pre><code>
+function longestCommonSubsequence(text1, text2) {
+    const m = text1.length;
+    const n = text2.length;
+    const dp = Array(m + 1).fill().map(() => Array(n + 1).fill(0));
+    
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (text1[i-1] === text2[j-1]) {
+                dp[i][j] = dp[i-1][j-1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+            }
+        }
+    }
+    
+    return dp[m][n];
+}
+                    </code></pre>
+                    
+                    <h2>Advanced DP Techniques</h2>
+                    <h3>1. State Compression</h3>
+                    <p>For problems with small state spaces, we can use bit manipulation to optimize memory usage:</p>
+                    <pre><code>
+// Traveling Salesman Problem with state compression
+function tspDP(graph) {
+    const n = graph.length;
+    const dp = Array(1 << n).fill().map(() => Array(n).fill(Infinity));
+    
+    // Base case: starting from city 0
+    dp[1][0] = 0;
+    
+    for (let mask = 0; mask < (1 << n); mask++) {
+        for (let u = 0; u < n; u++) {
+            if (!(mask & (1 << u))) continue;
+            
+            for (let v = 0; v < n; v++) {
+                if (mask & (1 << v)) continue;
+                const newMask = mask | (1 << v);
+                dp[newMask][v] = Math.min(
+                    dp[newMask][v],
+                    dp[mask][u] + graph[u][v]
+                );
+            }
+        }
+    }
+    
+    return dp[(1 << n) - 1][0];
+}
+                    </code></pre>
+                    
+                    <h2>Common DP Problem Types</h2>
+                    <p>Here are some common categories of DP problems:</p>
+                    <ul>
+                        <li><strong>1D DP:</strong> Problems with a single state variable (e.g., Fibonacci, Climbing Stairs)</li>
+                        <li><strong>2D DP:</strong> Problems with two state variables (e.g., LCS, Edit Distance)</li>
+                        <li><strong>Interval DP:</strong> Problems involving intervals or ranges (e.g., Matrix Chain Multiplication)</li>
+                        <li><strong>Tree DP:</strong> Problems on trees (e.g., Binary Tree Maximum Path Sum)</li>
+                        <li><strong>Digit DP:</strong> Problems involving digits or numbers (e.g., Count Numbers with Unique Digits)</li>
+                    </ul>
+                    
+                    <h2>Tips for Solving DP Problems</h2>
+                    <p>When approaching a DP problem:</p>
+                    <ol>
+                        <li>Identify if the problem has optimal substructure and overlapping subproblems</li>
+                        <li>Define the state and transition function</li>
+                        <li>Choose between top-down (memoization) or bottom-up (tabulation) approach</li>
+                        <li>Consider space optimization if possible</li>
+                        <li>Handle edge cases and base cases carefully</li>
+                    </ol>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Dynamic Programming is a powerful technique that can solve a wide range of complex problems efficiently. While it may seem challenging at first, with practice and understanding of common patterns, you can master this technique and apply it effectively in competitive programming and real-world applications. Remember to start with simpler problems and gradually move to more complex ones, always focusing on understanding the underlying principles.</p>
+                    
+                    <div class="blog-tags">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Dynamic Programming</span>
+                        <span class="tag">Competitive Programming</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                    
+                    <a href="../index.html#blogs" class="btn"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
