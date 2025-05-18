@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Term-GPT - Kushal Jain</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./project-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
 </head>
 <body>
     <header>
@@ -16,55 +18,89 @@
                 <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="project-detail">
+        <div class="project-detail">
             <h1>Term-GPT</h1>
+            
             <div class="project-hero">
                 <img src="../images/term-gpt.png" alt="Term-GPT Screenshot" class="project-hero-image">
             </div>
+            
             <div class="project-info">
                 <div class="project-description">
                     <h2>Overview</h2>
-                    <p>Term-GPT is an innovative command-line tool that leverages Large Language Models (LLMs) to translate natural language into executable commands. The project supports multiple AI models including Google Gemini, OpenAI GPT, and Anthropic Claude, providing users with a versatile and powerful interface for command-line operations.</p>
+                    <p>Term-GPT is an LLM-powered command line tool designed to translate natural language into terminal commands. It supports multiple AI models, offers fast response times, and can even work offline through quantized models.</p>
                     
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li>Support for 8+ LLM models including Google Gemini, OpenAI GPT, and Anthropic Claude</li>
-                        <li>Fast mode with 1.6-second response times</li>
-                        <li>Offline functionality through quantized models</li>
-                        <li>50% reduction in API call costs through optimized model selection</li>
-                        <li>Rate-limiting usage across devices without GPUs</li>
-                    </ul>
-
-                    <h2>Technical Details</h2>
-                    <p>The project implements a sophisticated model selection algorithm that optimizes for both performance and cost. It uses quantized models for offline functionality while maintaining high accuracy in command translation. The system is designed to work efficiently even on devices without dedicated GPUs.</p>
-
                     <h2>Technologies Used</h2>
                     <ul>
                         <li>Python</li>
-                        <li>LLM APIs (Google Gemini, OpenAI GPT, Anthropic Claude)</li>
-                        <li>Model Quantization</li>
-                        <li>Command Line Interface Development</li>
+                        <li>OpenAI API</li>
+                        <li>Google Gemini API</li>
+                        <li>Anthropic Claude API</li>
+                        <li>ONNX Runtime</li>
+                        <li>Command Line Interface Design</li>
                     </ul>
+                    
+                    <h2>Key Features</h2>
+                    <p>Term-GPT offers a range of powerful features that make it a versatile tool for developers and system administrators.</p>
+                    <ul>
+                        <li><strong>Multi-Model Support:</strong> Integration with 8+ models including Google Gemini, OpenAI GPT, and Anthropic Claude</li>
+                        <li><strong>Fast Response:</strong> 1.6-second response times in fast mode</li>
+                        <li><strong>Offline Capability:</strong> Support for free, offline use through quantized models</li>
+                        <li><strong>Cost Optimization:</strong> 50% reduction in API call costs through intelligent model selection</li>
+                        <li><strong>Cross-Platform:</strong> Works on devices without GPUs through optimized model selection</li>
+                    </ul>
+                    
+                    <h2>Implementation Details</h2>
+                    <p>Term-GPT uses a prompt engineering approach to convert natural language instructions into executable commands. The system supports multiple LLM backends and implements a fallback mechanism to ensure reliable command generation.</p>
+                    
+                    <p>For offline usage, the tool employs quantized models that have been optimized for CPU inference, allowing it to run efficiently even on resource-constrained devices.</p>
+                    
+                    <h2>Challenges and Solutions</h2>
+                    <p>One of the main challenges was balancing response speed with accuracy. This was addressed by implementing a tiered approach where simple commands are handled by faster, lighter models while complex requests are routed to more capable models.</p>
+                    
+                    <p>Another challenge involved making the tool accessible across different platforms. This was solved by creating a platform-agnostic core with specialized adapters for different operating systems.</p>
+                    
+                    <h2>Results and Impact</h2>
+                    <p>Term-GPT has significantly improved command-line productivity for users by eliminating the need to remember complex syntax. The offline capability and optimization for low-resource environments have made it accessible to a wider audience, including those in areas with limited connectivity.</p>
+                    
+                    <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kushaljain0" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://codeforces.com/profile/kushaljain0" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
             </div>
             <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
