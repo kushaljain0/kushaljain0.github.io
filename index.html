@@ -16,6 +16,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#blogs">Blogs</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -108,51 +109,322 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="./images/term-gpt.png" alt="Term-GPT Screenshot" class="project-image">
-                    <h3>Term-GPT</h3>
-                    <p>Created an LLM-powered command line tool with support for 8+ models, including Google Gemini, OpenAI GPT, and Anthropic Claude, enabling natural language to command translation with 1.6-second response times in fast mode.</p>
-                    <p>Enabled free, offline use through quantized models, achieving a 50% reduction in API call costs by optimizing model selection and rate-limiting usage across devices without GPUs.</p>
-                    <a href="./projects/term-gpt.html" class="btn">View Details</a>
-                </div>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" id="project-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="project-grid slider-grid">
+                    <div class="project-card">
+                        <img src="./images/visualgo.png" alt="VisuAlgo Screenshot" class="project-image">
+                        <h3>VisuAlgo</h3>
+                        <div class="project-description-container">
+                            <p class="project-description-paragraph">An interactive visualization tool for pathfinding algorithms like BFS and DFS.</p>
+                            <p class="project-description-paragraph">Features include custom maze creation, real-time algorithm visualization, and step-by-step exploration of how these algorithms work.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a href="./projects/visualgo.html" class="btn">View Details</a>
+                        </div>
+                    </div>
 
-                <div class="project-card">
-                    <img src="./images/filetagger.png" alt="FileTagger Screenshot" class="project-image">
-                    <h3>FileTagger</h3>
-                    <p>Made in a 2-day Hackathon Conducted by Tally Solutions Limited. A Simple-GUI-based file tagging and searching tool built using Python for Windows OS.</p>
-                    <a href="./projects/filetagger.html" class="btn">View Details</a>
-                </div>
+                    <div class="project-card">
+                        <img src="./images/term-gpt.png" alt="Term-GPT Screenshot" class="project-image">
+                        <h3>Term-GPT</h3>
+                        <div class="project-description-container">
+                            <p class="project-description-paragraph">Created an LLM-powered command line tool with support for 8+ models, including Google Gemini, OpenAI GPT, and Anthropic Claude, enabling natural language to command translation with 1.6-second response times in fast mode.</p>
+                            <p class="project-description-paragraph">Enabled free, offline use through quantized models, achieving a 50% reduction in API call costs by optimizing model selection and rate-limiting usage across devices without GPUs.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a href="./projects/term-gpt.html" class="btn">View Details</a>
+                        </div>
+                    </div>
 
-                <div class="project-card">
-                    <img src="./images/uci.png" alt="UCI Screenshot" class="project-image">
-                    <h3>Unified Complaint Interface (UCI)</h3>
-                    <p>Combines all the complaint portals into one portal, making it easier for the user to file the complaint regardless of the problem. Database with SQLite, following the front end with HTML5 and CSS3, and finally hosted on Heroku.</p>
-                    <a href="./projects/uci.html" class="btn">View Details</a>
+                    <div class="project-card">
+                        <img src="./images/filetagger.png" alt="FileTagger Screenshot" class="project-image">
+                        <h3>FileTagger</h3>
+                        <div class="project-description-container">
+                            <p class="project-description-paragraph">Made in a 2-day Hackathon Conducted by Tally Solutions Limited.</p>
+                            <p class="project-description-paragraph">A Simple-GUI-based file tagging and searching tool built using Python for Windows OS.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a href="./projects/filetagger.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="./images/uci.png" alt="UCI Screenshot" class="project-image">
+                        <h3>Unified Complaint Interface (UCI)</h3>
+                        <div class="project-description-container">
+                            <p class="project-description-paragraph">Combines all the complaint portals into one portal, making it easier for the user to file the complaint regardless of the problem.</p>
+                            <p class="project-description-paragraph">Database with SQLite, following the front end with HTML5 and CSS3, and finally hosted on Heroku.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a href="./projects/uci.html" class="btn">View Details</a>
+                        </div>
+                    </div>
                 </div>
+                <button class="slider-btn next-btn" id="project-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs" class="blogs">
+            <h2>Blogs</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" id="blog-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="blog-grid slider-grid">
+                    <div class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="./images/ml-edge.jpg" alt="ML on Edge Devices" class="blog-image">
+                            <div class="blog-date">
+                                <span class="day">15</span>
+                                <span class="month">Jul</span>
+                                <span class="year">2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Optimizing ML Models for Edge Devices</h3>
+                            <p class="blog-preview">Exploring strategies to compress and optimize machine learning models for deployment on resource-constrained edge devices.</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-tag"></i> Machine Learning</span>
+                                <span><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                            <a href="./blogs/ml-edge-devices.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="./images/nodejs-microservices.png" alt="Node.js Microservices" class="blog-image">
+                            <div class="blog-date">
+                                <span class="day">10</span>
+                                <span class="month">Jul</span>
+                                <span class="year">2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Building Scalable Microservices with Node.js</h3>
+                            <p class="blog-preview">A practical guide to designing and implementing scalable microservice architectures using Node.js and Docker.</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-tag"></i> Backend Development</span>
+                                <span><i class="fas fa-clock"></i> 10 min read</span>
+                            </div>
+                            <a href="./blogs/nodejs-microservices.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="./images/dynamic-programming.png" alt="Dynamic Programming" class="blog-image">
+                            <div class="blog-date">
+                                <span class="day">5</span>
+                                <span class="month">Jul</span>
+                                <span class="year">2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Competitive Programming Techniques: Dynamic Programming</h3>
+                            <p class="blog-preview">Mastering dynamic programming techniques for solving complex algorithmic problems in competitive programming contests.</p>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-tag"></i> Algorithms</span>
+                                <span><i class="fas fa-clock"></i> 12 min read</span>
+                            </div>
+                            <a href="./blogs/dynamic-programming.html" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="blog-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <p>C, C++, Python, Java, Javascript, Typescript, GoLang, CUDA</p>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" id="skills-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="skills-grid slider-grid">
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <p class="skills-category-description">Core languages I use for development and problem-solving</p>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C/C++</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript/TypeScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">GoLang</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CUDA</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Web & Backend Technologies</h3>
+                        </div>
+                        <p class="skills-category-description">Frameworks and tools for building scalable applications</p>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Node.js & Express</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Flask & SQLite</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Docker & AWS</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">GStreamer & NVR</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Hyperledger Fabric</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB & Redis</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI/ML & Computer Vision</h3>
+                        </div>
+                        <p class="skills-category-description">Tools and frameworks for machine learning and computer vision</p>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">PyTorch & libtorch</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">YOLO & Object Detection</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">LLMs & Transformers</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Computer Vision</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Nvidia Triton</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Model Optimization</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <div class="skills-category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Others</h3>
+                        </div>
+                        <p class="skills-category-description">Additional tools and methodologies I work with</p>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Git & Version Control</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Problem Solving</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">System Design</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Software Testing</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Performance Optimization</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Competitive Programming</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Web Technologies / Frameworks</h3>
-                    <p>Flask, SQLite, Hyperledger Fabric, Pinecone Vector Database, Nodejs, React, Node Addon API, Docker, AWS Microservices, Nvidia Triton, Redis, MongoDB</p>
-                </div>
-                <div class="skills-category">
-                    <h3>ML/AI</h3>
-                    <p>Numpy, Pandas, Scipy, Seaborn, Sklearn, Matplotlib, TensorFlow, Keras, Pytorch, Pygame, OpenAI Embeddings, Folium</p>
-                </div>
-                <div class="skills-category">
-                    <h3>Miscellaneous</h3>
-                    <p>Problem Solving, Git, Information Theory, Q#, Game Theory, Automation, Software Testing, Scripting</p>
-                </div>
+                <button class="slider-btn next-btn" id="skills-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -277,15 +549,142 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
+            // Conveyor belt auto-scroll functionality
+            function initConveyorBelt(sliderGrid, scrollAmount) {
+                let isHovered = false;
+                let isScrolling = true;
+                let scrollSpeed = 0.5; // Reduced from 1 to 0.5 pixels per frame
+                let lastTimestamp = 0;
+                let animationFrameId;
+
+                // Clone the first few items and append them to create seamless loop
+                function setupInfiniteScroll() {
+                    const items = sliderGrid.children;
+                    const itemCount = items.length;
+                    const itemsToClone = Math.min(3, itemCount);
+
+                    for (let i = 0; i < itemsToClone; i++) {
+                        const clone = items[i].cloneNode(true);
+                        sliderGrid.appendChild(clone);
+                    }
                 }
-            });
+
+                function animateScroll(timestamp) {
+                    if (!lastTimestamp) lastTimestamp = timestamp;
+                    const elapsed = timestamp - lastTimestamp;
+
+                    if (isScrolling && !isHovered) {
+                        // Smooth scrolling with easing
+                        const currentScroll = sliderGrid.scrollLeft;
+                        sliderGrid.scrollLeft = currentScroll + scrollSpeed;
+                        
+                        // Reset scroll position when reaching the end of original items
+                        const originalWidth = sliderGrid.scrollWidth / 2;
+                        if (sliderGrid.scrollLeft >= originalWidth) {
+                            sliderGrid.scrollLeft = 0;
+                        }
+                    }
+
+                    lastTimestamp = timestamp;
+                    animationFrameId = requestAnimationFrame(animateScroll);
+                }
+
+                // Start the animation
+                setupInfiniteScroll();
+                animationFrameId = requestAnimationFrame(animateScroll);
+
+                // Cleanup function
+                function cleanup() {
+                    if (animationFrameId) {
+                        cancelAnimationFrame(animationFrameId);
+                    }
+                }
+
+                // Pause on hover
+                sliderGrid.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                });
+
+                sliderGrid.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                });
+
+                // Pause on touch
+                sliderGrid.addEventListener('touchstart', () => {
+                    isHovered = true;
+                });
+
+                sliderGrid.addEventListener('touchend', () => {
+                    isHovered = false;
+                });
+
+                return {
+                    pause: () => { 
+                        isScrolling = false;
+                        cleanup();
+                    },
+                    resume: () => { 
+                        isScrolling = true;
+                        lastTimestamp = 0;
+                        animationFrameId = requestAnimationFrame(animateScroll);
+                    }
+                };
+            }
+
+            // Slider functionality with manual controls
+            function initSlider(nextBtn, prevBtn, sliderGrid, scrollAmount) {
+                let conveyorBelt;
+                
+                nextBtn.addEventListener('click', function() {
+                    if (conveyorBelt) conveyorBelt.pause();
+                    sliderGrid.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                    if (conveyorBelt) setTimeout(() => conveyorBelt.resume(), 1000);
+                });
+                
+                prevBtn.addEventListener('click', function() {
+                    if (conveyorBelt) conveyorBelt.pause();
+                    sliderGrid.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                    if (conveyorBelt) setTimeout(() => conveyorBelt.resume(), 1000);
+                });
+
+                // Initialize conveyor belt
+                conveyorBelt = initConveyorBelt(sliderGrid, scrollAmount);
+            }
+            
+            const scrollAmount = 360; // Width of card + gap
+
+            // Initialize project slider
+            const projectNext = document.getElementById('project-next');
+            const projectPrev = document.getElementById('project-prev');
+            const projectGrid = document.querySelector('.project-grid.slider-grid');
+            
+            if (projectNext && projectPrev && projectGrid) {
+                initSlider(projectNext, projectPrev, projectGrid, scrollAmount);
+            }
+            
+            // Initialize blog slider
+            const blogNext = document.getElementById('blog-next');
+            const blogPrev = document.getElementById('blog-prev');
+            const blogGrid = document.querySelector('.blog-grid.slider-grid');
+            
+            if (blogNext && blogPrev && blogGrid) {
+                initSlider(blogNext, blogPrev, blogGrid, scrollAmount);
+            }
+
+            // Initialize skills slider
+            const skillsNext = document.getElementById('skills-next');
+            const skillsPrev = document.getElementById('skills-prev');
+            const skillsGrid = document.querySelector('.skills-grid.slider-grid');
+            
+            if (skillsNext && skillsPrev && skillsGrid) {
+                initSlider(skillsNext, skillsPrev, skillsGrid, scrollAmount);
+            }
         });
     </script>
 </body>
