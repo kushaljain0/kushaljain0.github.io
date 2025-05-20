@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Scalable Microservices with Node.js - Kushal Jain</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-detail">
+            <h1>Building Scalable Microservices with Node.js</h1>
+            <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> July 10, 2024</span>
+                <span><i class="fas fa-tag"></i> Backend Development</span>
+                <span><i class="fas fa-clock"></i> 10 min read</span>
+            </div>
+            
+            <div class="blog-hero">
+                <img src="../images/nodejs-microservices.png" alt="Node.js Microservices Architecture" class="blog-hero-image">
+            </div>
+            
+            <div class="blog-info">
+                <div class="blog-detail-content">
+                    <h2>Introduction</h2>
+                    <p>Microservices architecture has become the go-to approach for building scalable and maintainable applications. Node.js, with its event-driven, non-blocking I/O model, is particularly well-suited for microservices development. This article explores best practices and patterns for building robust microservices using Node.js.</p>
+                    
+                    <h2>Microservices Architecture Overview</h2>
+                    <p>A microservices architecture breaks down an application into small, independent services that communicate through well-defined APIs. Key characteristics include:</p>
+                    <ul>
+                        <li><strong>Service Independence:</strong> Each service can be developed, deployed, and scaled independently</li>
+                        <li><strong>Technology Diversity:</strong> Services can use different technologies and data stores</li>
+                        <li><strong>Resilience:</strong> Failures in one service don't affect the entire system</li>
+                        <li><strong>Scalability:</strong> Services can be scaled independently based on demand</li>
+                    </ul>
+                    
+                    <h2>Setting Up a Node.js Microservice</h2>
+                    <p>Here's a basic example of setting up a microservice using Express.js:</p>
+                    
+                    <pre><code>
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json());
+
+// Service discovery registration
+const registerService = async () => {
+    try {
+        await serviceRegistry.register({
+            name: 'user-service',
+            url: `http://localhost:${port}`,
+            health: '/health'
+        });
+    } catch (error) {
+        console.error('Service registration failed:', error);
+    }
+};
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'healthy' });
+});
+
+// API endpoints
+app.get('/api/users', async (req, res) => {
+    try {
+        const users = await userService.getAllUsers();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Start server
+app.listen(port, () => {
+    console.log(`User service listening on port ${port}`);
+    registerService();
+});
+                    </code></pre>
+                    
+                    <h2>Communication Patterns</h2>
+                    <h3>1. Synchronous Communication (REST/GraphQL)</h3>
+                    <p>For direct service-to-service communication, REST APIs and GraphQL are common choices:</p>
+                    <ul>
+                        <li>REST: Simple, widely adopted, and easy to implement</li>
+                        <li>GraphQL: Flexible querying and reduced over-fetching</li>
+                    </ul>
+                    
+                    <h3>2. Asynchronous Communication (Message Queues)</h3>
+                    <p>For event-driven communication, message queues like RabbitMQ or Kafka are ideal:</p>
+                    <pre><code>
+const amqp = require('amqplib');
+
+async function publishEvent(event) {
+    const connection = await amqp.connect('amqp://localhost');
+    const channel = await connection.createChannel();
+    
+    await channel.assertQueue('events');
+    channel.sendToQueue('events', Buffer.from(JSON.stringify(event)));
+    
+    await channel.close();
+    await connection.close();
+}
+                    </code></pre>
+                    
+                    <h2>Best Practices</h2>
+                    <p>When building microservices with Node.js, consider these best practices:</p>
+                    <ul>
+                        <li><strong>Containerization:</strong> Use Docker for consistent deployment environments</li>
+                        <li><strong>Service Discovery:</strong> Implement service registration and discovery</li>
+                        <li><strong>Circuit Breaking:</strong> Prevent cascading failures with circuit breakers</li>
+                        <li><strong>Logging and Monitoring:</strong> Implement centralized logging and monitoring</li>
+                        <li><strong>API Gateway:</strong> Use an API gateway for routing and cross-cutting concerns</li>
+                    </ul>
+                    
+                    <h2>Deployment and Scaling</h2>
+                    <p>Modern deployment strategies for Node.js microservices include:</p>
+                    <ul>
+                        <li>Container orchestration with Kubernetes</li>
+                        <li>Serverless deployment using AWS Lambda or similar services</li>
+                        <li>CI/CD pipelines for automated testing and deployment</li>
+                        <li>Horizontal scaling based on metrics and load</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Building microservices with Node.js offers a powerful combination of performance, scalability, and developer productivity. By following best practices and choosing appropriate communication patterns, you can create robust and maintainable microservices architectures. Remember that successful microservices implementation requires careful consideration of deployment, monitoring, and operational aspects.</p>
+                    
+                    <div class="blog-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Backend Development</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Scalability</span>
+                    </div>
+                    
+                    <a href="../index.html#blogs" class="btn"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

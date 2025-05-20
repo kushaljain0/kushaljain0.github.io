@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FileTagger - Kushal Jain</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./project-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
 </head>
 <body>
     <header>
@@ -16,58 +18,91 @@
                 <li><a href="../index.html#about">About</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="project-detail">
+        <div class="project-detail">
             <h1>FileTagger</h1>
+            
             <div class="project-hero">
                 <img src="../images/filetagger.png" alt="FileTagger Screenshot" class="project-hero-image">
             </div>
+            
             <div class="project-info">
                 <div class="project-description">
                     <h2>Overview</h2>
-                    <p>FileTagger is a GUI-based file management tool developed during the Tally Codebrewers 2022 hackathon. The application provides an intuitive interface for tagging and searching files on Windows OS, making file organization and retrieval more efficient.</p>
+                    <p>FileTagger is a simple GUI-based file tagging and searching tool built using Python for Windows OS. It was developed during a 2-day Hackathon conducted by Tally Solutions Limited. The application allows users to tag files with custom keywords and then quickly search for them based on these tags.</p>
                     
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li>Simple and intuitive GUI interface</li>
-                        <li>File tagging system for easy organization</li>
-                        <li>Advanced search functionality</li>
-                        <li>Windows OS integration</li>
-                        <li>Quick file access through tags</li>
-                    </ul>
-
-                    <h2>Technical Details</h2>
-                    <p>Developed in a 2-day hackathon, FileTagger demonstrates efficient file system management and user interface design. The application uses Python's built-in libraries for file system operations and a custom GUI framework for the user interface.</p>
-
                     <h2>Technologies Used</h2>
                     <ul>
                         <li>Python</li>
-                        <li>GUI Framework</li>
+                        <li>Tkinter (GUI Framework)</li>
+                        <li>SQLite (Database)</li>
                         <li>Windows File System API</li>
-                        <li>SQLite Database</li>
+                        <li>Python File Watchers</li>
                     </ul>
-
-                    <h2>Achievements</h2>
-                    <p>This project was developed as part of the Tally Codebrewers 2022 hackathon, where it demonstrated innovative solutions for file management and organization.</p>
+                    
+                    <h2>Key Features</h2>
+                    <p>FileTagger offers several features to simplify file organization and retrieval:</p>
+                    <ul>
+                        <li><strong>Custom Tagging:</strong> Assign multiple custom tags to any file in your system</li>
+                        <li><strong>Quick Search:</strong> Find files based on tag combinations using intuitive search operators</li>
+                        <li><strong>Tag Management:</strong> Create, edit, and delete tags with a user-friendly interface</li>
+                        <li><strong>File Preview:</strong> Preview files directly from the search results</li>
+                        <li><strong>Windows Integration:</strong> Seamless integration with Windows file explorer context menu</li>
+                    </ul>
+                    
+                    <h2>Implementation Details</h2>
+                    <p>FileTagger uses a SQLite database to store file paths and their associated tags. The application is built with Tkinter for the GUI components, providing a clean and intuitive user interface. File system events are monitored to keep the database in sync with actual file changes.</p>
+                    
+                    <p>The search functionality implements a simple query language that allows users to combine tags using AND, OR, and NOT operators, making it possible to perform complex file searches quickly.</p>
+                    
+                    <h2>Challenges and Solutions</h2>
+                    <p>One of the main challenges was developing a complete solution within the 2-day hackathon timeframe. This was addressed by focusing on core functionality first and using rapid prototyping techniques.</p>
+                    
+                    <p>Another challenge was ensuring performance with large file collections. This was solved by implementing efficient database indexing and lazy loading of search results.</p>
+                    
+                    <h2>Results and Impact</h2>
+                    <p>The project was successful in the hackathon, demonstrating how a simple file tagging system can significantly improve file organization and retrieval compared to traditional folder-based approaches. The tool has particular utility for users who work with large numbers of files that don't fit neatly into a hierarchical folder structure.</p>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/kushaljain0/Codebrewers-Hackathon-FileTagger" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+                        <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kushaljain0" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://codeforces.com/profile/kushaljain0" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
             </div>
             <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

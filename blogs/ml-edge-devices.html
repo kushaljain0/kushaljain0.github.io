@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizing ML Models for Edge Devices - Kushal Jain</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-detail">
+            <h1>Optimizing ML Models for Edge Devices</h1>
+            <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> July 15, 2024</span>
+                <span><i class="fas fa-tag"></i> Machine Learning</span>
+                <span><i class="fas fa-clock"></i> 8 min read</span>
+            </div>
+            
+            <div class="blog-hero">
+                <img src="../images/ml-edge.jpg" alt="ML on Edge Devices" class="blog-hero-image">
+            </div>            
+            <div clas
+s="blog-info">
+                <div class="blog-detail-content">
+                    <h2>Introduction</h2>
+                    <p>Edge computing has revolutionized how we deploy machine learning models, bringing AI capabilities directly to devices where data is generated. However, deploying ML models on edge devices presents unique challenges due to limited computational resources, memory constraints, and power consumption requirements. This article explores various strategies and techniques for optimizing ML models for edge deployment.</p>
+                    
+                    <h2>Understanding Edge Device Constraints</h2>
+                    <p>Before diving into optimization techniques, it's crucial to understand the typical constraints of edge devices:</p>
+                    <ul>
+                        <li><strong>Limited Computing Power:</strong> Most edge devices have constrained CPU/GPU capabilities compared to cloud servers</li>
+                        <li><strong>Memory Constraints:</strong> Limited RAM and storage for model weights and intermediate computations</li>
+                        <li><strong>Power Consumption:</strong> Need to balance performance with battery life</li>
+                        <li><strong>Real-time Requirements:</strong> Many edge applications require low-latency inference</li>
+                    </ul>
+                    
+                    <h2>Model Optimization Techniques</h2>
+                    <h3>1. Model Quantization</h3>
+                    <p>Quantization reduces model size and improves inference speed by converting floating-point weights to lower precision integers. Here's a basic example using TensorFlow:</p>
+                    
+                    <pre><code>
+import tensorflow as tf
+
+# Convert model to TFLite format with quantization
+converter = tf.lite.TFLiteConverter.from_saved_model(saved_model_dir)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+converter.target_spec.supported_types = [tf.float16]
+tflite_model = converter.convert()
+
+# Save the quantized model
+with open('model_quantized.tflite', 'wb') as f:
+    f.write(tflite_model)
+                    </code></pre>
+                    
+                    <h3>2. Model Pruning</h3>
+                    <p>Pruning removes unnecessary connections or neurons from the model, reducing its size while maintaining accuracy. Modern pruning techniques include:</p>
+                    <ul>
+                        <li>Magnitude-based pruning</li>
+                        <li>Structured pruning</li>
+                        <li>Iterative pruning with fine-tuning</li>
+                    </ul>
+                    
+                    <h2>Best Practices for Edge Deployment</h2>
+                    <p>When deploying ML models to edge devices, consider these best practices:</p>
+                    <ul>
+                        <li><strong>Model Selection:</strong> Choose architectures that are inherently efficient (e.g., MobileNet, EfficientNet)</li>
+                        <li><strong>Hardware Acceleration:</strong> Utilize device-specific accelerators (NPUs, DSPs) when available</li>
+                        <li><strong>Dynamic Computation:</strong> Implement adaptive computation based on device capabilities</li>
+                        <li><strong>Monitoring:</strong> Track model performance and resource usage in production</li>
+                    </ul>
+                    
+                    <h2>Case Study: Mobile Object Detection</h2>
+                    <p>Let's look at a practical example of optimizing an object detection model for mobile deployment:</p>
+                    <ul>
+                        <li>Original YOLOv5 model: 27MB, 7.2ms inference time</li>
+                        <li>After quantization: 7MB, 3.1ms inference time</li>
+                        <li>After pruning: 4MB, 2.8ms inference time</li>
+                        <li>Final optimized model: 3.5MB, 2.5ms inference time</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Optimizing ML models for edge devices requires a careful balance between model size, inference speed, and accuracy. By employing techniques like quantization, pruning, and model architecture optimization, we can create efficient models that run effectively on resource-constrained devices. As edge computing continues to evolve, these optimization strategies will become increasingly important for deploying AI applications in real-world scenarios.</p>
+                    
+                    <div class="blog-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Edge Computing</span>
+                        <span class="tag">Model Optimization</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Mobile AI</span>
+                    </div>
+                    
+                    <a href="../index.html#blogs" class="btn"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisuAlgo - Kushal Jain</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./project-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kushal Jain</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blogs">Blogs</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-detail">
+            <h1>VisuAlgo</h1>
+            
+            <div class="project-hero">
+                <img src="../images/visualgo.png" alt="VisuAlgo Screenshot" class="project-hero-image">
+                <div class="project-demo">
+                    <h3>Watch it in Action</h3>
+                    <img src="../images/visualgo-demo.gif" alt="VisuAlgo Demo" class="project-demo-gif">
+                    <p class="demo-caption">Real-time visualization of BFS algorithm finding the shortest path</p>
+                </div>
+            </div>
+            
+            <div class="project-info">
+                <div class="project-description">
+                    <h2>Overview</h2>
+                    <p>VisuAlgo is an interactive visualization tool designed to help users understand and learn about pathfinding algorithms. It provides a visual representation of how algorithms like Breadth-First Search (BFS) and Depth-First Search (DFS) work in real-time, making it easier to grasp complex algorithmic concepts.</p>
+                    
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>Pygame (Graphics and Visualization)</li>
+                        <li>Tkinter (User Interface)</li>
+                        <li>SQLite (Data Storage)</li>
+                    </ul>
+                    
+                    <h2>Key Features</h2>
+                    <p>VisuAlgo offers several powerful features that make learning algorithms more engaging and intuitive:</p>
+                    <ul>
+                        <li><strong>Interactive Grid:</strong> Users can create custom mazes by placing walls and selecting start/end points</li>
+                        <li><strong>Multiple Algorithms:</strong> Support for both BFS and DFS algorithms with real-time visualization</li>
+                        <li><strong>Custom Maze Creation:</strong> Build your own maze layouts or generate random mazes</li>
+                        <li><strong>Step-by-Step Visualization:</strong> Watch algorithms explore the maze with clear visual feedback</li>
+                        <li><strong>User Controls:</strong> Pause, resume, and restart the visualization at any time</li>
+                    </ul>
+                    
+                    <h2>Implementation Details</h2>
+                    <p>The project uses Pygame for the main visualization engine, creating an interactive grid where users can draw walls and observe algorithm behavior. The implementation includes:</p>
+                    <ul>
+                        <li>A grid-based system where each cell can be a wall, path, start point, or end point</li>
+                        <li>Efficient algorithm implementations with clear visual feedback for visited nodes and paths</li>
+                        <li>Intuitive user interface for maze creation and algorithm selection</li>
+                        <li>Real-time visualization of algorithm progress with color-coded states</li>
+                    </ul>
+                    
+                    <h2>Challenges and Solutions</h2>
+                    <p>One of the main challenges was creating a smooth and responsive visualization while maintaining algorithm accuracy. This was solved by:</p>
+                    <ul>
+                        <li>Implementing efficient data structures for grid representation</li>
+                        <li>Using Pygame's event system for responsive user interaction</li>
+                        <li>Optimizing the visualization loop to maintain performance</li>
+                    </ul>
+                    
+                    <h2>Results and Impact</h2>
+                    <p>VisuAlgo has proven to be an effective educational tool for understanding pathfinding algorithms. The visual nature of the tool makes it easier for users to:</p>
+                    <ul>
+                        <li>Understand how BFS and DFS algorithms work in practice</li>
+                        <li>See the differences between algorithms in real-time</li>
+                        <li>Experiment with different maze configurations</li>
+                        <li>Learn algorithm concepts through interactive visualization</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/kushaljain0/VisuAlgo" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+                        <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kushaljain0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kushal-jain-1a03b11bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/monkedluffy" target="_blank"><i class="fas fa-code-branch"></i></a>
+            </div>
+            <p>&copy; 2024 Kushal Jain. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
