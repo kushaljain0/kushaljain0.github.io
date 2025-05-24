@@ -799,6 +799,20 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.view-counter {
+    margin-bottom: 1rem;
+}
+
+.view-counter img {
+    height: 30px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.view-counter img:hover {
+    opacity: 1;
+}
+
 .social-links a {
     color: var(--primary-color);
     margin: 0 1rem;
