@@ -17,7 +17,10 @@ A responsive portfolio website showcasing my professional experience and project
 
 ## Hosting
 
-This website is hosted on GitHub Pages. Visit: [kushaljain0.github.io](https://kushaljain0.github.io)
+This website is hosted on multiple platforms:
+
+- **Netlify**: [steady-moxie-e1c695.netlify.app](https://steady-moxie-e1c695.netlify.app/)
+- **GitHub Pages**: [kushaljain0.github.io](https://kushaljain0.github.io)
 
 To rename your repository for GitHub Pages:
 1. Go to your repository settings
